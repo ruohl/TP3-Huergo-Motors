@@ -20,9 +20,14 @@ namespace HuegoVentas
 
         private void btBuscar_Click(object sender, EventArgs e)
         {
+            ActualizarGrilla();
+        }
+
+        private void ActualizarGrilla()
+        {
             ClienteNegocio negocio = new ClienteNegocio();
 
-            List<ClienteDTO> lista =  negocio.BuscarClientes(txFiltro.Text);
+            List<ClienteDTO> lista = negocio.BuscarClientes(txFiltro.Text);
 
             gv.DataSource = lista;
         }
@@ -31,7 +36,7 @@ namespace HuegoVentas
         {
             frmClienteAlta f = new frmClienteAlta();
             f.ShowDialog();
-
+            ActualizarGrilla();
         }
     }
 }
