@@ -26,5 +26,12 @@ namespace HuegoVentas
 
             gv.DataSource = lista;
         }
+
+        private void btNuevo_Click(object sender, EventArgs e)
+        {
+            frmClienteAlta f = new frmClienteAlta();
+            f.ShowDialog();
+
+        }
     }
 }
