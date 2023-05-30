@@ -29,130 +29,130 @@ namespace HuegoVentas
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbID = new System.Windows.Forms.Label();
+            this.txbID = new System.Windows.Forms.TextBox();
+            this.txbNombre = new System.Windows.Forms.TextBox();
+            this.lbNombre = new System.Windows.Forms.Label();
+            this.txbDireccion = new System.Windows.Forms.TextBox();
+            this.lbDireccion = new System.Windows.Forms.Label();
+            this.txbTelefono = new System.Windows.Forms.TextBox();
+            this.lbTelefono = new System.Windows.Forms.Label();
+            this.txbEmail = new System.Windows.Forms.TextBox();
+            this.lbEmail = new System.Windows.Forms.Label();
+            this.txbContraseña = new System.Windows.Forms.TextBox();
+            this.lbContraseña = new System.Windows.Forms.Label();
             this.btCrear = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lbID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID";
+            this.lbID.AutoSize = true;
+            this.lbID.Location = new System.Drawing.Point(22, 21);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(18, 13);
+            this.lbID.TabIndex = 0;
+            this.lbID.Text = "ID";
             // 
-            // textBox1
+            // txbID
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txbID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(187, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txbID.Location = new System.Drawing.Point(187, 18);
+            this.txbID.Name = "txbID";
+            this.txbID.ReadOnly = true;
+            this.txbID.Size = new System.Drawing.Size(100, 20);
+            this.txbID.TabIndex = 1;
             // 
-            // textBox2
+            // txbNombre
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txbNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(187, 44);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.txbNombre.Location = new System.Drawing.Point(187, 44);
+            this.txbNombre.Name = "txbNombre";
+            this.txbNombre.Size = new System.Drawing.Size(100, 20);
+            this.txbNombre.TabIndex = 3;
             // 
-            // label2
+            // lbNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nombre";
+            this.lbNombre.AutoSize = true;
+            this.lbNombre.Location = new System.Drawing.Point(22, 47);
+            this.lbNombre.Name = "lbNombre";
+            this.lbNombre.Size = new System.Drawing.Size(44, 13);
+            this.lbNombre.TabIndex = 2;
+            this.lbNombre.Text = "Nombre";
             // 
-            // textBox3
+            // txbDireccion
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txbDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(187, 70);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.txbDireccion.Location = new System.Drawing.Point(187, 70);
+            this.txbDireccion.Name = "txbDireccion";
+            this.txbDireccion.Size = new System.Drawing.Size(100, 20);
+            this.txbDireccion.TabIndex = 5;
             // 
-            // label3
+            // lbDireccion
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Direcciòn";
+            this.lbDireccion.AutoSize = true;
+            this.lbDireccion.Location = new System.Drawing.Point(22, 73);
+            this.lbDireccion.Name = "lbDireccion";
+            this.lbDireccion.Size = new System.Drawing.Size(52, 13);
+            this.lbDireccion.TabIndex = 4;
+            this.lbDireccion.Text = "Direccion";
             // 
-            // textBox4
+            // txbTelefono
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txbTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(187, 96);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.txbTelefono.Location = new System.Drawing.Point(187, 96);
+            this.txbTelefono.Name = "txbTelefono";
+            this.txbTelefono.Size = new System.Drawing.Size(100, 20);
+            this.txbTelefono.TabIndex = 7;
             // 
-            // label4
+            // lbTelefono
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 99);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Telefono";
+            this.lbTelefono.AutoSize = true;
+            this.lbTelefono.Location = new System.Drawing.Point(22, 99);
+            this.lbTelefono.Name = "lbTelefono";
+            this.lbTelefono.Size = new System.Drawing.Size(49, 13);
+            this.lbTelefono.TabIndex = 6;
+            this.lbTelefono.Text = "Telefono";
             // 
-            // textBox5
+            // txbEmail
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txbEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(187, 122);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 9;
+            this.txbEmail.Location = new System.Drawing.Point(187, 122);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.Size = new System.Drawing.Size(100, 20);
+            this.txbEmail.TabIndex = 9;
             // 
-            // label5
+            // lbEmail
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 125);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Email";
+            this.lbEmail.AutoSize = true;
+            this.lbEmail.Location = new System.Drawing.Point(22, 125);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(32, 13);
+            this.lbEmail.TabIndex = 8;
+            this.lbEmail.Text = "Email";
             // 
-            // textBox6
+            // txbContraseña
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txbContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Location = new System.Drawing.Point(187, 148);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 11;
+            this.txbContraseña.Location = new System.Drawing.Point(187, 148);
+            this.txbContraseña.Name = "txbContraseña";
+            this.txbContraseña.Size = new System.Drawing.Size(100, 20);
+            this.txbContraseña.TabIndex = 11;
             // 
-            // label6
+            // lbContraseña
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 151);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Contraseña";
+            this.lbContraseña.AutoSize = true;
+            this.lbContraseña.Location = new System.Drawing.Point(22, 151);
+            this.lbContraseña.Name = "lbContraseña";
+            this.lbContraseña.Size = new System.Drawing.Size(61, 13);
+            this.lbContraseña.TabIndex = 10;
+            this.lbContraseña.Text = "Contraseña";
             // 
             // btCrear
             // 
@@ -163,6 +163,7 @@ namespace HuegoVentas
             this.btCrear.TabIndex = 12;
             this.btCrear.Text = "Crear";
             this.btCrear.UseVisualStyleBackColor = true;
+            this.btCrear.Click += new System.EventHandler(this.btCrear_Click);
             // 
             // btCancelar
             // 
@@ -182,19 +183,20 @@ namespace HuegoVentas
             this.ClientSize = new System.Drawing.Size(311, 258);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btCrear);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txbContraseña);
+            this.Controls.Add(this.lbContraseña);
+            this.Controls.Add(this.txbEmail);
+            this.Controls.Add(this.lbEmail);
+            this.Controls.Add(this.txbTelefono);
+            this.Controls.Add(this.lbTelefono);
+            this.Controls.Add(this.txbDireccion);
+            this.Controls.Add(this.lbDireccion);
+            this.Controls.Add(this.txbNombre);
+            this.Controls.Add(this.lbNombre);
+            this.Controls.Add(this.txbID);
+            this.Controls.Add(this.lbID);
             this.Name = "frmClienteAlta";
+            this.ShowInTaskbar = false;
             this.Text = "frmClienteAlta";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -203,18 +205,18 @@ namespace HuegoVentas
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbID;
+        private System.Windows.Forms.TextBox txbID;
+        private System.Windows.Forms.TextBox txbNombre;
+        private System.Windows.Forms.Label lbNombre;
+        private System.Windows.Forms.TextBox txbDireccion;
+        private System.Windows.Forms.Label lbDireccion;
+        private System.Windows.Forms.TextBox txbTelefono;
+        private System.Windows.Forms.Label lbTelefono;
+        private System.Windows.Forms.TextBox txbEmail;
+        private System.Windows.Forms.Label lbEmail;
+        private System.Windows.Forms.TextBox txbContraseña;
+        private System.Windows.Forms.Label lbContraseña;
         private System.Windows.Forms.Button btCrear;
         private System.Windows.Forms.Button btCancelar;
     }

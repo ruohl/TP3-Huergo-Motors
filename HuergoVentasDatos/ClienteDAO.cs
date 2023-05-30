@@ -21,7 +21,7 @@ namespace HuergoVentasDatos
 
                 string query = $@"INSERT INTO [Clientes] (Id, Nombre, Direccion, Telefono, Email, Contraseña) 
                                 VALUES (
-                                    SELECT IsNull(MAX(ID), 1) FROM Clientes, 
+                                    (SELECT IsNull(MAX(ID), 0) FROM Clientes)+1, 
                                     '{cliente.Nombre}',
                                     '{cliente.Direccion}',
                                     '{cliente.Telefono}',
