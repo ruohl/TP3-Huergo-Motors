@@ -53,7 +53,7 @@ namespace HuergoVentasDatos
                 string query = $@"UPDATE [Accesorios]
                                   SET Nombre = '{accesorio.Nombre}',
                                       Modelo = '{accesorio.Modelo}',
-                                      Precio = '{accesorio.Precio}',
+                                      Precio = '{accesorio.Precio.ToString(System.Globalization.CultureInfo.InvariantCulture)}'
                                 WHERE Id = {accesorio.Id};";
 
                 using (System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(query, conn))

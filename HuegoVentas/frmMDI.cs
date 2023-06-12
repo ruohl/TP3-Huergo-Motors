@@ -97,5 +97,30 @@ namespace HuegoVentas
                 f.Show();
             }
         }
-	}
+
+        private void articulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool existe = false;
+
+            foreach (Form item in this.MdiChildren)
+            {
+                if (item is frmAccesorios)
+                {
+                    existe = true;
+                    item.BringToFront();
+                    //item.Show();
+                }
+
+            }
+
+            if (!existe)
+            {
+
+                frmAccesorios f = new frmAccesorios();
+                f.MdiParent = this;
+
+                f.Show();
+            }
+        }
+    }
 }

@@ -1,13 +1,7 @@
-﻿using HuergoVehiculoNegocio;
-using HuergoVentasDTO;
+﻿using HuergoVentasDTO;
 using HuergoVentasNegocio;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace HuegoVentas
@@ -88,5 +82,10 @@ namespace HuegoVentas
 		{
 
 		}
-	}
+
+        private void frmVehiculos_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
