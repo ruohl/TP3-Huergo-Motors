@@ -99,12 +99,12 @@ namespace HuergoVentasDatos
             return null;
         }
 
-        public List<ClienteDTO> ReadAll()
+        public List<ClienteDTO> ReadAll(string filtro)
         {
             System.Data.DataTable dt = new System.Data.DataTable();
 
             using (System.Data.SqlClient.SqlDataAdapter da = new System.Data.SqlClient.SqlDataAdapter(
-                "SELECT * FROM Clientes", DAOHelper.ConnectionString))
+                "SELECT * FROM Clientes WHERE Nombre LIKE '%{filtro}%' or Apellido LIKE '%{filtro}%'", DAOHelper.ConnectionString))
             {
                 da.Fill(dt);
             }

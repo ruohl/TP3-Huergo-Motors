@@ -50,9 +50,52 @@ namespace HuegoVentas
 
         private void vendoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmVendedores f = new HuegoVentas.frmVendedores();
-            f.MdiParent = this;
-            f.Show();
+            bool existe = false;
+
+            foreach (Form item in this.MdiChildren)
+            {
+                if (item is frmVendedores)
+                {
+                    existe = true;
+                    item.BringToFront();
+                    //item.Show();
+                }
+
+            }
+
+            if (!existe)
+            {
+
+                frmVendedores f = new frmVendedores();
+                f.MdiParent = this;
+
+                f.Show();
+            }
         }
-    }
+
+		private void vehiculosToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            bool existe = false;
+
+            foreach (Form item in this.MdiChildren)
+            {
+                if (item is frmVehiculos)
+                {
+                    existe = true;
+                    item.BringToFront();
+                    //item.Show();
+                }
+
+            }
+
+            if (!existe)
+            {
+
+                frmVehiculos f = new frmVehiculos();
+                f.MdiParent = this;
+
+                f.Show();
+            }
+        }
+	}
 }

@@ -23,8 +23,8 @@ namespace HuegoVentas
         public void CargarPersona(int id)
         {
             ClienteNegocio negocio = new ClienteNegocio();
-            ClienteDTO cliente = negocio.BuscarCliente(id); // Modificar esta línea
-            if (cliente != null) // Asegurarse de que el cliente no sea nulo
+            ClienteDTO cliente = negocio.BuscarCliente(id);
+            if (cliente != null)
             {
                 clienteId = cliente.Id;
                 txbID.Text = clienteId.ToString();

@@ -36,7 +36,7 @@ namespace HuergoVentasNegocio
         public List<ClienteDTO> BuscarClientes(string filtro)
         {
             ClienteDAO dao = new ClienteDAO();
-            return dao.ReadAll();
+            return dao.ReadAll(filtro);
         }
     }
 }

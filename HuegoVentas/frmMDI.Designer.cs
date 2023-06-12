@@ -103,6 +103,7 @@
 			this.vehiculosToolStripMenuItem.Name = "vehiculosToolStripMenuItem";
 			this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.vehiculosToolStripMenuItem.Text = "Vehiculos";
+			this.vehiculosToolStripMenuItem.Click += new System.EventHandler(this.vehiculosToolStripMenuItem_Click);
 			// 
 			// ventaToolStripMenuItem
 			// 
@@ -152,7 +153,7 @@
 			this.Controls.Add(this.menuStrip1);
 			this.IsMdiContainer = true;
 			this.MainMenuStrip = this.menuStrip1;
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "frmMDI";
 			this.Text = "Huergo Motors";
 			this.menuStrip1.ResumeLayout(false);

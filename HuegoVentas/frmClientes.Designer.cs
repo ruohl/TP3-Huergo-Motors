@@ -150,5 +150,5 @@
         private System.Windows.Forms.Button btEliminar;
         private System.Windows.Forms.Button btEditar;
         private System.Windows.Forms.Button btNuevo;
-    }
+	}
 }
