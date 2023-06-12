@@ -5,7 +5,7 @@ using System.Text;
 using HuergoVentasDTO;
 using HuergoVentasDatos;
 
-namespace HuergoVehiculoNegocio
+namespace HuergoVentasNegocio
 {
     public class VehiculoNegocio
     {

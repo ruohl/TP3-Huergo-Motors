@@ -50,6 +50,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAccesorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccesorios.Designer.cs">
+      <DependentUpon>frmAccesorios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmClienteAlta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccesorios.resx">
+      <DependentUpon>frmAccesorios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmClienteAlta.resx">
       <DependentUpon>frmClienteAlta.cs</DependentUpon>
