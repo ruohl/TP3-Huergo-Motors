@@ -66,20 +66,28 @@ namespace HuegoVentas
                 cliente.Contraseña = txbContraseña.Text;
                 ClienteNegocio negocio = new ClienteNegocio();
 
-                if (btCrear.Text == "Crear")
+                
+                this.Close();
+                if (!string.IsNullOrWhiteSpace(cliente.Nombre) && !string.IsNullOrWhiteSpace(cliente.Direccion) && !string.IsNullOrWhiteSpace(cliente.Telefono) && !string.IsNullOrWhiteSpace(cliente.Email) && !string.IsNullOrWhiteSpace(cliente.Contraseña))
                 {
-                    negocio.CrearCliente(cliente);
-                }
-                else if (btCrear.Text == "Guardar") // Agregamos esta condición para editar
-                {
-                    negocio.EditarCliente(cliente);
+                    if (btCrear.Text == "Crear")
+                    {
+                        negocio.CrearCliente(cliente);
+                    }
+                    else if (btCrear.Text == "Guardar") // Agregamos esta condición para editar
+                    {
+                        negocio.EditarCliente(cliente);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Acción no válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Acción no válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    MessageBox.Show("Error", "Debe completar todos los campos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                this.Close();
             }
             catch (Exception ex)
             {
