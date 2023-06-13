@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormHelper.cs" />
     <Compile Include="frmAccesorios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +81,12 @@
     <Compile Include="frmMDI.Designer.cs">
       <DependentUpon>frmMDI.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNuevaVentaAccesorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaVentaAccesorio.Designer.cs">
+      <DependentUpon>frmNuevaVentaAccesorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVehiculos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,8 +111,15 @@
     <Compile Include="frmVendedorAlta.Designer.cs">
       <DependentUpon>frmVendedorAlta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVentaNueva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentaNueva.Designer.cs">
+      <DependentUpon>frmVentaNueva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VentaNueva.cs" />
     <EmbeddedResource Include="frmAccesorios.resx">
       <DependentUpon>frmAccesorios.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +138,9 @@
     <EmbeddedResource Include="frmMDI.resx">
       <DependentUpon>frmMDI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaVentaAccesorio.resx">
+      <DependentUpon>frmNuevaVentaAccesorio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVehiculos.resx">
       <DependentUpon>frmVehiculos.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmVendedorAlta.resx">
       <DependentUpon>frmVendedorAlta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentaNueva.resx">
+      <DependentUpon>frmVentaNueva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

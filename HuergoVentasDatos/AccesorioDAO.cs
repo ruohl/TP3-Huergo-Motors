@@ -9,6 +9,32 @@ namespace HuergoVentasDatos
 {
     public class AccesorioDAO
     {
+        public List<AccesorioDTO> ReadAll()
+        {
+            System.Data.DataTable dt = new System.Data.DataTable();
+
+            using (System.Data.SqlClient.SqlDataAdapter da = new System.Data.SqlClient.SqlDataAdapter(
+                "SELECT * FROM Accesorios", DAOHelper.ConnectionString))
+            {
+                da.Fill(dt);
+            }
+
+            List<AccesorioDTO> lista = new List<AccesorioDTO>();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                AccesorioDTO cliente = new AccesorioDTO();
+
+                cliente.Id = Convert.ToInt32(dr["Id"]);
+                cliente.Nombre = Convert.ToString(dr["Nombre"]);
+                cliente.Modelo = Convert.ToString(dr["Modelo"]);
+                cliente.Precio = Convert.ToDecimal(dr["Precio"]);
+
+                lista.Add(cliente);
+            }
+
+            return lista;
+        }
         public void Create(AccesorioDTO accesorio)
         {
             using (System.Data.SqlClient.SqlConnection conn = new System.Data.SqlClient.SqlConnection(DAOHelper.ConnectionString))
@@ -20,7 +46,7 @@ namespace HuergoVentasDatos
                                     (SELECT ISNULL(MAX(Id), 0) FROM Clientes) + 1, 
                                     '{accesorio.Nombre}',
                                     '{accesorio.Modelo}',
-                                    '{accesorio.Precio.ToString(System.Globalization.CultureInfo.InvariantCulture)}');";
+                                    '{accesorio.Precio}');";
 
                 using (System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(query, conn))
                 {

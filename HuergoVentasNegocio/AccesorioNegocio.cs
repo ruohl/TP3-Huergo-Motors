@@ -15,6 +15,12 @@ namespace HuergoVentasNegocio
             dao.Create(accesorioDto);
         }
 
+        public List<AccesorioDTO> GetAll()
+        {
+            AccesorioDAO dao = new AccesorioDAO();
+            return dao.ReadAll();
+        }
+
         public void EditarAccesorio(AccesorioDTO accesorioDto)
         {
             AccesorioDAO dao = new AccesorioDAO();

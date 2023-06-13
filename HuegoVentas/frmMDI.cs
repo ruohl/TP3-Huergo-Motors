@@ -148,5 +148,12 @@ namespace HuegoVentas
                 f.Show();
             }
         }
+
+        private void nuevaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+                frmVentaNueva f = new frmVentaNueva();
+                f.MdiParent = this;
+                f.Show();
+        }
     }
 }
