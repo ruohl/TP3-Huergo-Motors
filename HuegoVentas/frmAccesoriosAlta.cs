@@ -16,17 +16,23 @@ namespace HuegoVentas
 
         public void CargarAccesorio(int id)
         {
-            AccesorioNegocio negocio = new AccesorioNegocio();
-            AccesorioDTO accesorio = negocio.BuscarAccesorio(id);
-            if (accesorio != null)
+            try
             {
-                accesorioId = accesorio.Id;
-                txbID.Text = accesorioId.ToString();
-                txbModelo.Text = accesorio.Modelo;
-                txbPrecio.Text = accesorio.Precio.ToString();
-                txbNombre.Text = accesorio.Nombre;
+                AccesorioNegocio negocio = new AccesorioNegocio();
+                AccesorioDTO accesorio = negocio.BuscarAccesorio(id);
+                if (accesorio != null)
+                {
+                    accesorioId = accesorio.Id;
+                    txbID.Text = accesorioId.ToString();
+                    txbModelo.Text = accesorio.Modelo;
+                    txbPrecio.Text = accesorio.Precio.ToString();
+                    txbNombre.Text = accesorio.Nombre;
+                }
             }
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public void EditarAccesorio()
@@ -41,23 +47,30 @@ namespace HuegoVentas
 
         private void btCrear_Click(object sender, EventArgs e)
         {
-            AccesorioDTO accesorio = new AccesorioDTO();
-            accesorio.Id = Convert.ToInt32(accesorioId);
-            accesorio.Modelo = txbModelo.Text;
-            accesorio.Nombre = txbNombre.Text;
-            accesorio.Precio = Convert.ToDecimal(txbPrecio.Text);
-            AccesorioNegocio negocio = new AccesorioNegocio();
-
-            if (btCrear.Text == "Crear")
+            try
             {
-                negocio.CrearAccesorio(accesorio);
-            }
-            else
-            {
-                negocio.EditarAccesorio(accesorio);
-            }
+                AccesorioDTO accesorio = new AccesorioDTO();
+                accesorio.Id = Convert.ToInt32(accesorioId);
+                accesorio.Modelo = txbModelo.Text;
+                accesorio.Nombre = txbNombre.Text;
+                accesorio.Precio = Convert.ToDecimal(txbPrecio.Text);
+                AccesorioNegocio negocio = new AccesorioNegocio();
 
-            this.Close();
+                if (btCrear.Text == "Crear")
+                {
+                    negocio.CrearAccesorio(accesorio);
+                }
+                else
+                {
+                    negocio.EditarAccesorio(accesorio);
+                }
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frmAccesoriosAlta_Load(object sender, EventArgs e)

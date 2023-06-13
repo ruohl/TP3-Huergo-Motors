@@ -32,11 +32,18 @@ namespace HuegoVentas
 
         private void ActualizarGrilla()
         {
-            ClienteNegocio negocio = new ClienteNegocio();
+            try
+            {
+                ClienteNegocio negocio = new ClienteNegocio();
 
-            List<ClienteDTO> lista = negocio.BuscarClientes(txFiltro.Text);
+                List<ClienteDTO> lista = negocio.BuscarClientes(txFiltro.Text);
 
-            gvClientes.DataSource = lista;
+                gvClientes.DataSource = lista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btNuevo_Click(object sender, EventArgs e)
@@ -51,7 +58,6 @@ namespace HuegoVentas
             {
                 MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-          
         }
 
         private void btEditar_Click(object sender, EventArgs e)
@@ -77,38 +83,51 @@ namespace HuegoVentas
                 }
             }
             catch (Exception ex)
-                {
-                    MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {
+                MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
         }
 
-		private void btEliminar_Click(object sender, EventArgs e)
-		{
-            if (gvClientes.SelectedRows.Count > 0)
+        private void btEliminar_Click(object sender, EventArgs e)
+        {
+            try
             {
-                DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar este cliente?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
+                if (gvClientes.SelectedRows.Count > 0)
                 {
-                    object valor = gvClientes.SelectedRows[0].Cells["Id"].Value;
-                    int id = Convert.ToInt32(valor);
+                    DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar este cliente?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    ClienteNegocio negocio = new ClienteNegocio();
-                    negocio.EliminarCliente(id);
+                    if (result == DialogResult.Yes)
+                    {
+                        object valor = gvClientes.SelectedRows[0].Cells["Id"].Value;
+                        int id = Convert.ToInt32(valor);
 
-                    ActualizarGrilla();
+                        ClienteNegocio negocio = new ClienteNegocio();
+                        negocio.EliminarCliente(id);
+
+                        ActualizarGrilla();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No hay ningún cliente seleccionado.", "Dato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("No hay ningún cliente seleccionado.", "Dato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void frmClientes_Load(object sender, EventArgs e)
         {
-            ActualizarGrilla();
+            try
+            {
+                ActualizarGrilla();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

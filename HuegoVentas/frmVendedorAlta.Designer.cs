@@ -53,6 +53,7 @@ namespace HuegoVentas
 			this.btCancelar.TabIndex = 27;
 			this.btCancelar.Text = "Cancelar";
 			this.btCancelar.UseVisualStyleBackColor = true;
+			this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
 			// 
 			// btCrear
 			// 

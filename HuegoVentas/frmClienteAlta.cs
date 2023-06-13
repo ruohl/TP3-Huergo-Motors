@@ -22,17 +22,24 @@ namespace HuegoVentas
 
         public void CargarPersona(int id)
         {
-            ClienteNegocio negocio = new ClienteNegocio();
-            ClienteDTO cliente = negocio.BuscarCliente(id);
-            if (cliente != null)
+            try
             {
-                clienteId = cliente.Id;
-                txbID.Text = clienteId.ToString();
-                txbNombre.Text = cliente.Nombre;
-                txbDireccion.Text = cliente.Direccion;
-                txbTelefono.Text = cliente.Telefono;
-                txbEmail.Text = cliente.Email;
-                txbContraseña.Text = cliente.Contraseña;
+                ClienteNegocio negocio = new ClienteNegocio();
+                ClienteDTO cliente = negocio.BuscarCliente(id);
+                if (cliente != null)
+                {
+                    clienteId = cliente.Id;
+                    txbID.Text = clienteId.ToString();
+                    txbNombre.Text = cliente.Nombre;
+                    txbDireccion.Text = cliente.Direccion;
+                    txbTelefono.Text = cliente.Telefono;
+                    txbEmail.Text = cliente.Email;
+                    txbContraseña.Text = cliente.Contraseña;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -48,29 +55,36 @@ namespace HuegoVentas
 
         private void btCrear_Click(object sender, EventArgs e)
         {
-            ClienteDTO cliente = new ClienteDTO();
-            cliente.Id = clienteId;
-            cliente.Nombre = txbNombre.Text;
-            cliente.Direccion = txbDireccion.Text;
-            cliente.Telefono = txbTelefono.Text;
-            cliente.Email = txbEmail.Text;
-            cliente.Contraseña = txbContraseña.Text;
-            ClienteNegocio negocio = new ClienteNegocio();
+            try
+            {
+                ClienteDTO cliente = new ClienteDTO();
+                cliente.Id = clienteId;
+                cliente.Nombre = txbNombre.Text;
+                cliente.Direccion = txbDireccion.Text;
+                cliente.Telefono = txbTelefono.Text;
+                cliente.Email = txbEmail.Text;
+                cliente.Contraseña = txbContraseña.Text;
+                ClienteNegocio negocio = new ClienteNegocio();
 
-            if (btCrear.Text == "Crear")
-            {
-                negocio.CrearCliente(cliente);
+                if (btCrear.Text == "Crear")
+                {
+                    negocio.CrearCliente(cliente);
+                }
+                else if (btCrear.Text == "Guardar") // Agregamos esta condición para editar
+                {
+                    negocio.EditarCliente(cliente);
+                }
+                else
+                {
+                    MessageBox.Show("Acción no válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                this.Close();
             }
-            else if (btCrear.Text == "Guardar") // Agregamos esta condición para editar
+            catch (Exception ex)
             {
-                negocio.EditarCliente(cliente);
+                MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-            {
-                MessageBox.Show("Acción no válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            this.Close();
         }
     }
 }
