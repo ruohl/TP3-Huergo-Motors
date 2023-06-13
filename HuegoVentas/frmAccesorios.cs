@@ -87,5 +87,10 @@ namespace HuegoVentas
         {
 
         }
-    }
+
+		private void frmAccesorios_Load(object sender, EventArgs e)
+		{
+            ActualizarGrilla();
+        }
+	}
 }

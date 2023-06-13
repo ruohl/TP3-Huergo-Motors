@@ -75,5 +75,9 @@ namespace HuegoVentas
             }
         }
 
+		private void frmVendedores_Load(object sender, EventArgs e)
+		{
+            ActualizarGrilla();
+        }
 	}
 }

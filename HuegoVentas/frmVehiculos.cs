@@ -77,15 +77,9 @@ namespace HuegoVentas
                 MessageBox.Show("No hay ningún Vehiculo seleccionado.", "Dato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-		private void btBuscar_Click_1(object sender, EventArgs e)
-		{
-
-		}
-
         private void frmVehiculos_Load(object sender, EventArgs e)
         {
-
+            ActualizarGrilla();
         }
     }
 }

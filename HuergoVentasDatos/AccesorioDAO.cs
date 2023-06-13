@@ -20,7 +20,7 @@ namespace HuergoVentasDatos
                                     (SELECT ISNULL(MAX(Id), 0) FROM Clientes) + 1, 
                                     '{accesorio.Nombre}',
                                     '{accesorio.Modelo}',
-                                    '{accesorio.Precio}');";
+                                    '{accesorio.Precio.ToString(System.Globalization.CultureInfo.InvariantCulture)}');";
 
                 using (System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(query, conn))
                 {

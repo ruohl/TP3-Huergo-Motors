@@ -30,6 +30,7 @@ namespace HuegoVentas
         /// </summary>
         private void InitializeComponent()
         {
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVendedores));
 			this.gvVendedores = new System.Windows.Forms.DataGridView();
 			this.label1 = new System.Windows.Forms.Label();
 			this.txFiltro = new System.Windows.Forms.TextBox();
@@ -134,8 +135,10 @@ namespace HuegoVentas
 			this.Controls.Add(this.txFiltro);
 			this.Controls.Add(this.btBuscar);
 			this.Controls.Add(this.gvVendedores);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "frmVendedores";
-			this.Text = "frmVendedores";
+			this.Text = "Vendedores";
+			this.Load += new System.EventHandler(this.frmVendedores_Load);
 			((System.ComponentModel.ISupportInitialize)(this.gvVendedores)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();

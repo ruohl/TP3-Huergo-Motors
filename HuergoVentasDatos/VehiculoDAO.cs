@@ -20,7 +20,7 @@ namespace HuergoVentasDatos
                                     (SELECT ISNULL(MAX(Id), 0) FROM Vendedores) + 1, 
                                     '{vehiculo.Tipo}',
                                     '{vehiculo.Modelo}',
-                                    '{vehiculo.PrecioVenta}',
+                                    '{vehiculo.PrecioVenta.ToString(System.Globalization.CultureInfo.InvariantCulture)}',
                                     '{vehiculo.Stock}');";
 
                 using (System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(query, conn))
@@ -49,20 +49,15 @@ namespace HuergoVentasDatos
             {
                 conn.Open();
 
-                string query = @"UPDATE [Vehiculos]
-                        SET Tipo = @Tipo,
-                            Modelo = @Modelo,
-                            PrecioVenta = @PrecioVenta,
-                            Stock = @Stock
-                        WHERE Id = @Id;";
+                string query = $@"UPDATE [Vehiculos]
+                                SET Tipo = '{vehiculo.Tipo}',
+                                    Modelo = '{vehiculo.Modelo}',
+                                    PrecioVenta = '{vehiculo.PrecioVenta.ToString(System.Globalization.CultureInfo.InvariantCulture)}',
+                                    Stock = '{vehiculo.Stock}'
+                                WHERE Id = {vehiculo.Id};";
 
                 using (System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Tipo", vehiculo.Tipo);
-                    cmd.Parameters.AddWithValue("@Modelo", vehiculo.Modelo);
-                    cmd.Parameters.AddWithValue("@PrecioVenta", vehiculo.PrecioVenta);
-                    cmd.Parameters.AddWithValue("@Stock", vehiculo.Stock);
-                    cmd.Parameters.AddWithValue("@Id", vehiculo.Id);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -83,6 +78,7 @@ namespace HuergoVentasDatos
 
                 VehiculoDTO vehiculo = new VehiculoDTO();
                 vehiculo.Id = Convert.ToInt32(dr["Id"]);
+                vehiculo.Tipo = Convert.ToString(dr["Tipo"]);
                 vehiculo.Modelo = Convert.ToString(dr["Modelo"]);
                 vehiculo.PrecioVenta = Convert.ToDecimal(dr["PrecioVenta"]);
                 vehiculo.Stock = Convert.ToInt32(dr["Stock"]);
@@ -109,6 +105,7 @@ namespace HuergoVentasDatos
             {
                 VehiculoDTO vehiculo = new VehiculoDTO();
                 vehiculo.Id = Convert.ToInt32(dr["Id"]);
+                vehiculo.Tipo = Convert.ToString(dr["Tipo"]);
                 vehiculo.Modelo = Convert.ToString(dr["Modelo"]);
                 vehiculo.PrecioVenta = Convert.ToDecimal(dr["PrecioVenta"]);
                 vehiculo.Stock = Convert.ToInt32(dr["Stock"]);

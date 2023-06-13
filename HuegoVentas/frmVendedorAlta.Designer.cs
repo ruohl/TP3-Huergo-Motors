@@ -31,6 +31,7 @@ namespace HuegoVentas
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVendedorAlta));
 			this.btCancelar = new System.Windows.Forms.Button();
 			this.btCrear = new System.Windows.Forms.Button();
 			this.txbSucursal = new System.Windows.Forms.TextBox();
@@ -152,8 +153,9 @@ namespace HuegoVentas
 			this.Controls.Add(this.lbNombre);
 			this.Controls.Add(this.txbID);
 			this.Controls.Add(this.lbID);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "frmVendedorAlta";
-			this.Text = "frmVendedoresAlta";
+			this.Text = "Vendedor";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
