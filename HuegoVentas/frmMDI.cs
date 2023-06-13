@@ -122,5 +122,30 @@ namespace HuegoVentas
                 f.Show();
             }
         }
+
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool existe = false;
+
+            foreach (Form item in this.MdiChildren)
+            {
+                if (item is frmConsulta)
+                {
+                    existe = true;
+                    item.BringToFront();
+                    //item.Show();
+                }
+
+            }
+
+            if (!existe)
+            {
+
+                frmConsulta f = new frmConsulta();
+                f.MdiParent = this;
+
+                f.Show();
+            }
+        }
     }
 }

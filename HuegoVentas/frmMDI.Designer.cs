@@ -124,8 +124,9 @@
             // consultaToolStripMenuItem
             // 
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultaToolStripMenuItem.Text = "Consulta";
+            this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click);
             // 
             // btnSalir
             // 

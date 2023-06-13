@@ -1,1 +1,1 @@
-select *from Clientes
+select a.Nombre, b.Nombre, c.Modelo, d.Id, d.Fecha, d.IdVehiculo, d.IdCliente, d.IdVendedor, d.Observaciones, d.Total from Clientes a, Vendedores b, Vehiculos c, Ventas d

@@ -22,7 +22,7 @@ namespace HuegoVentas
             {
                 accesorioId = accesorio.Id;
                 txbID.Text = accesorioId.ToString();
-                txbNombre.Text = accesorio.Modelo;
+                txbModelo.Text = accesorio.Modelo;
                 txbPrecio.Text = accesorio.Precio.ToString();
                 txbNombre.Text = accesorio.Nombre;
             }
@@ -43,7 +43,7 @@ namespace HuegoVentas
         {
             AccesorioDTO accesorio = new AccesorioDTO();
             accesorio.Id = Convert.ToInt32(accesorioId);
-            accesorio.Modelo = txbNombre.Text;
+            accesorio.Modelo = txbModelo.Text;
             accesorio.Nombre = txbNombre.Text;
             accesorio.Precio = Convert.ToDecimal(txbPrecio.Text);
             AccesorioNegocio negocio = new AccesorioNegocio();

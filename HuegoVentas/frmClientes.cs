@@ -20,7 +20,14 @@ namespace HuegoVentas
 
         private void btBuscar_Click(object sender, EventArgs e)
         {
-            ActualizarGrilla();
+            try
+            {
+                ActualizarGrilla();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ActualizarGrilla()
@@ -34,30 +41,46 @@ namespace HuegoVentas
 
         private void btNuevo_Click(object sender, EventArgs e)
         {
-            frmClienteAlta f = new frmClienteAlta();
-            f.ShowDialog();
-            ActualizarGrilla();
+            try
+            {
+                frmClienteAlta f = new frmClienteAlta();
+                f.ShowDialog();
+                ActualizarGrilla();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+          
         }
 
         private void btEditar_Click(object sender, EventArgs e)
         {
-            frmClienteAlta f = new frmClienteAlta();
-            if (gvClientes.SelectedRows.Count > 0)
+            try
             {
-                object valor = gvClientes.SelectedRows[0].Cells["Id"].Value;
+                frmClienteAlta f = new frmClienteAlta();
+                if (gvClientes.SelectedRows.Count > 0)
+                {
+                    object valor = gvClientes.SelectedRows[0].Cells["Id"].Value;
 
-                int id = Convert.ToInt32(valor);
+                    int id = Convert.ToInt32(valor);
 
-                f.CargarPersona(id);
-                f.EditarClientes();
-                f.ShowDialog();
-                ActualizarGrilla(); // Actualizar la grilla después de cerrar
+                    f.CargarPersona(id);
+                    f.EditarClientes();
+                    f.ShowDialog();
+                    ActualizarGrilla(); // Actualizar la grilla después de cerrar
+                }
+                else
+                {
+                    MessageBox.Show("No hay ninguna persona seleccionada", "Dato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
             }
-            else
-            {
-                MessageBox.Show("No hay ninguna persona seleccionada", "Dato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+            catch (Exception ex)
+                {
+                    MessageBox.Show("Error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+           
         }
 
 		private void btEliminar_Click(object sender, EventArgs e)
@@ -82,5 +105,10 @@ namespace HuegoVentas
                 MessageBox.Show("No hay ningún cliente seleccionado.", "Dato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-	}
+
+        private void frmClientes_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

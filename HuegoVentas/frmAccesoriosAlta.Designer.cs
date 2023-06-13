@@ -85,7 +85,7 @@ namespace HuegoVentas
             // 
             this.txbNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbNombre.Location = new System.Drawing.Point(193, 103);
+            this.txbNombre.Location = new System.Drawing.Point(193, 77);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(100, 20);
             this.txbNombre.TabIndex = 45;
@@ -93,7 +93,7 @@ namespace HuegoVentas
             // lbNombre
             // 
             this.lbNombre.AutoSize = true;
-            this.lbNombre.Location = new System.Drawing.Point(28, 106);
+            this.lbNombre.Location = new System.Drawing.Point(28, 80);
             this.lbNombre.Name = "lbNombre";
             this.lbNombre.Size = new System.Drawing.Size(44, 13);
             this.lbNombre.TabIndex = 44;
@@ -103,7 +103,7 @@ namespace HuegoVentas
             // 
             this.txbModelo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbModelo.Location = new System.Drawing.Point(193, 77);
+            this.txbModelo.Location = new System.Drawing.Point(193, 103);
             this.txbModelo.Name = "txbModelo";
             this.txbModelo.Size = new System.Drawing.Size(100, 20);
             this.txbModelo.TabIndex = 43;
@@ -130,7 +130,7 @@ namespace HuegoVentas
             // lbModelo
             // 
             this.lbModelo.AutoSize = true;
-            this.lbModelo.Location = new System.Drawing.Point(28, 80);
+            this.lbModelo.Location = new System.Drawing.Point(28, 106);
             this.lbModelo.Name = "lbModelo";
             this.lbModelo.Size = new System.Drawing.Size(42, 13);
             this.lbModelo.TabIndex = 42;
