@@ -1,4 +1,5 @@
 ﻿using HuergoVentasDTO;
+using HuergoVentasNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

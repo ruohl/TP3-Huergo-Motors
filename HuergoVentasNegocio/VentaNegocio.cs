@@ -7,7 +7,7 @@ using System.Text;
 
 namespace HuergoVentasNegocio
 {
-    class VentaNegocio
+    public class VentaNegocio
     {
         public List<VentaModel> BuscarVenta(string filtro)
         {
