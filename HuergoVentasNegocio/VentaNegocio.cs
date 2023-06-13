@@ -11,7 +11,7 @@ namespace HuergoVentasNegocio
     {
         public List<VentaModel> BuscarVenta(string filtro)
         {
-            VentaDAO dao = new VentaDAO();
+            VentaNuevaDAO dao = new VentaNuevaDAO();
             return dao.ReadAll(filtro);
         }
     }

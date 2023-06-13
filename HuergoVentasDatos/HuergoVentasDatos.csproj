@@ -45,9 +45,11 @@
     <Compile Include="ClienteDAO.cs" />
     <Compile Include="DAOHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vehiculo.cs" />
     <Compile Include="VehiculoDAO.cs" />
     <Compile Include="VendedorDAO.cs" />
     <Compile Include="VentaDAO.cs" />
+    <Compile Include="VentaNuevasDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HuergoVentasDTO\HuergoVentasDTO.csproj">

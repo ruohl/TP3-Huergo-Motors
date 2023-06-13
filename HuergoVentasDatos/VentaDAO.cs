@@ -7,7 +7,7 @@ using System.Text;
 
 namespace HuergoVentasDatos
 {
-    public class VentaDAO
+    public class VentaNuevaDAO
     {
         public List<VentaModel> ReadAll(string filtro)
         {
